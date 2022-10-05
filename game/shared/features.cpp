@@ -33,7 +33,7 @@ namespace features
 	}
 
 	static void     standalone_rcs(C_Player local_player);
-	static BOOL     triggerbot(C_Player local_player, C_Player target_player, C_Team target_team, cs::WEAPON_CLASS weapon_class);
+	//static BOOL     triggerbot(C_Player local_player, C_Player target_player, C_Team target_team, cs::WEAPON_CLASS weapon_class);
 	static void     aimbot(C_Player local_player, C_Player target_player, cs::WEAPON_CLASS weapon_class, DWORD bullet_count, BOOL head_only);
 	static vec3     get_target_angle(C_Player local_player, vec3 position, DWORD bullet_count);
 	static C_Player get_best_target(C_Player local_player, DWORD bullet_count, C_Team* target_team);
@@ -75,8 +75,8 @@ void features::run(void)
 
 	BOOL mouse_1 = cs::input::get_button_state(107);
 	BOOL aimbot_button = cs::input::get_button_state(config::aimbot_button);
-	BOOL triggerbot_button = cs::input::get_button_state(config::triggerbot_button);
-	BOOL current_button = aimbot_button + triggerbot_button + mouse_1;
+	//BOOL triggerbot_button = cs::input::get_button_state(config::triggerbot_button);
+	BOOL current_button = aimbot_button /* + triggerbot_button*/ + mouse_1;
 
 
 	if (!m_previous_button && current_button)
@@ -131,7 +131,7 @@ void features::run(void)
 		return;
 	}
 
-	if (aimbot_button || triggerbot_button)
+	if (aimbot_button)
 	{
 		m_aimbot_active = 1;
 	}
@@ -210,12 +210,12 @@ void features::run(void)
 	if (b_can_aimbot)
 	{
 		BOOL force_head_only = 0;
-		if (triggerbot_button)
-		{
-			force_head_only = triggerbot(local_player, target_player, target_team, m_weapon_class);
-		}
+		//if (triggerbot_button)
+		//{
+		//	force_head_only = triggerbot(local_player, target_player, target_team, m_weapon_class);
+		//}
 
-		if (aimbot_button || triggerbot_button)
+		if (aimbot_button)
 		{
 			features::aimbot(local_player,
 				target_player, m_weapon_class, rcs_bullet_count, force_head_only);
@@ -272,140 +272,140 @@ static void features::standalone_rcs(C_Player local_player)
 	m_rcs_old_punch = current_punch;
 }
 
-static BOOL features::triggerbot(C_Player local_player, C_Player target_player, C_Team target_team, cs::WEAPON_CLASS weapon_class)
-{
-	//
-	// force head only for pistols and scout (class Pistol contains ssg08)
-	//
-	BOOL  head_only = 0;
-	QWORD tick_count_skip = 0;
-
-	if (weapon_class == cs::WEAPON_CLASS::Pistol)
-	{
-		tick_count_skip = random_number(15, 50);
-		head_only = 1;
-	}
-	else if (weapon_class == cs::WEAPON_CLASS::Sniper)
-	{
-		tick_count_skip = random_number(30, 80);
-	}
-	else if (weapon_class == cs::WEAPON_CLASS::Rifle)
-	{
-		tick_count_skip = random_number(125, 170);
-		head_only = 1;
-	}
-	else
-	{
-		//
-		// invalid class
-		//
-		return 0;
-	}
-
-
-	//
-	// mouse is still pressed
-	//
-	if (m_mouse_down_tick)
-	{
-		return head_only;
-	}
-
-	//
-	// accurate shots only :D
-	//
-	vec2 punch = cs::player::get_vec_punch(local_player);
-	if (punch.x < -0.08f)
-	{
-		return head_only;
-	}
-
-	BOOL found = 0;
-
-	//
-	// for snipers we can try use incross
-	//
-	if (head_only == 0)
-	{
-		if (cs::player::get_crosshair_id(local_player) == cs::player::get_player_id(target_player))
-		{
-			found = 1;
-		}
-	}
-
-	//
-	// enemy is not visible, force headonly for any gun
-	//
-	if (!found)
-	{
-		if (!cs::player::is_visible(local_player, target_player))
-		{
-			head_only = 1;
-		}
-	}
-
-	//
-	// manually check if aiming at head
-	//
-	if (!found)
-	{
-
-		typedef struct {
-			int   bone;
-			float radius;
-			vec3  min;
-			vec3  max;
-		} HITBOX;
-
-		HITBOX hitbox_list[2] = {
-
-			{8, 3.900000f, {-1.100000f, 1.400000f,  0.100000f},  {3.000000f,  0.800000f, 0.100000f}},
-			{8, 2.800000f, {-0.200000f, 1.100000f,  0.000000f},  {3.600000f,  0.100000f, 0.000000f}}
-		};
-
-		matrix3x4_t matrix;
-		if (!cs::player::get_bone_position(target_player, 8, &matrix))
-		{
-			return head_only;
-		}
-
-		vec2 viewangles_2 = cs::engine::get_viewangles();
-		vec3 viewangles = vec3{ viewangles_2.x, viewangles_2.y, 0 };
-
-		vec3 dir = math::vec_atd(viewangles);
-		vec3 eye = cs::player::get_eye_position(local_player);
-
-		int  team_num = cs::teams::get_team_num(target_team);
-
-		team_num = team_num - 2;
-
-		if (team_num < 0 || team_num > 1)
-		{
-			return head_only;
-		}
-
-		if (math::vec_min_max(eye, dir,
-			math::vec_transform(hitbox_list[team_num].min, matrix),
-			math::vec_transform(hitbox_list[team_num].max, matrix),
-			hitbox_list[team_num].radius))
-		{
-			found = 1;
-		}
-	}
-
-	if (found)
-	{
-		QWORD current_tick = cs::engine::get_current_tick();
-		if (m_mouse_click_ticks < current_tick)
-		{
-			m_mouse_down_tick = current_tick;
-			m_mouse_click_ticks = tick_count_skip + m_mouse_down_tick;
-			input::mouse1_down();
-		}
-	}
-
-	return head_only;
-}
+//static BOOL features::triggerbot(C_Player local_player, C_Player target_player, C_Team target_team, cs::WEAPON_CLASS weapon_class)
+//{
+//	//
+//	// force head only for pistols and scout (class Pistol contains ssg08)
+//	//
+//	BOOL  head_only = 0;
+//	QWORD tick_count_skip = 0;
+//
+//	if (weapon_class == cs::WEAPON_CLASS::Pistol)
+//	{
+//		tick_count_skip = random_number(15, 50);
+//		head_only = 1;
+//	}
+//	else if (weapon_class == cs::WEAPON_CLASS::Sniper)
+//	{
+//		tick_count_skip = random_number(30, 80);
+//	}
+//	else if (weapon_class == cs::WEAPON_CLASS::Rifle)
+//	{
+//		tick_count_skip = random_number(125, 170);
+//		head_only = 1;
+//	}
+//	else
+//	{
+//		//
+//		// invalid class
+//		//
+//		return 0;
+//	}
+//
+//
+//	//
+//	// mouse is still pressed
+//	//
+//	if (m_mouse_down_tick)
+//	{
+//		return head_only;
+//	}
+//
+//	//
+//	// accurate shots only :D
+//	//
+//	vec2 punch = cs::player::get_vec_punch(local_player);
+//	if (punch.x < -0.08f)
+//	{
+//		return head_only;
+//	}
+//
+//	BOOL found = 0;
+//
+//	//
+//	// for snipers we can try use incross
+//	//
+//	if (head_only == 0)
+//	{
+//		if (cs::player::get_crosshair_id(local_player) == cs::player::get_player_id(target_player))
+//		{
+//			found = 1;
+//		}
+//	}
+//
+//	//
+//	// enemy is not visible, force headonly for any gun
+//	//
+//	if (!found)
+//	{
+//		if (!cs::player::is_visible(local_player, target_player))
+//		{
+//			head_only = 1;
+//		}
+//	}
+//
+//	//
+//	// manually check if aiming at head
+//	//
+//	if (!found)
+//	{
+//
+//		typedef struct {
+//			int   bone;
+//			float radius;
+//			vec3  min;
+//			vec3  max;
+//		} HITBOX;
+//
+//		HITBOX hitbox_list[2] = {
+//
+//			{8, 3.900000f, {-1.100000f, 1.400000f,  0.100000f},  {3.000000f,  0.800000f, 0.100000f}},
+//			{8, 2.800000f, {-0.200000f, 1.100000f,  0.000000f},  {3.600000f,  0.100000f, 0.000000f}}
+//		};
+//
+//		matrix3x4_t matrix;
+//		if (!cs::player::get_bone_position(target_player, 8, &matrix))
+//		{
+//			return head_only;
+//		}
+//
+//		vec2 viewangles_2 = cs::engine::get_viewangles();
+//		vec3 viewangles = vec3{ viewangles_2.x, viewangles_2.y, 0 };
+//
+//		vec3 dir = math::vec_atd(viewangles);
+//		vec3 eye = cs::player::get_eye_position(local_player);
+//
+//		int  team_num = cs::teams::get_team_num(target_team);
+//
+//		team_num = team_num - 2;
+//
+//		if (team_num < 0 || team_num > 1)
+//		{
+//			return head_only;
+//		}
+//
+//		if (math::vec_min_max(eye, dir,
+//			math::vec_transform(hitbox_list[team_num].min, matrix),
+//			math::vec_transform(hitbox_list[team_num].max, matrix),
+//			hitbox_list[team_num].radius))
+//		{
+//			found = 1;
+//		}
+//	}
+//
+//	if (found)
+//	{
+//		QWORD current_tick = cs::engine::get_current_tick();
+//		if (m_mouse_click_ticks < current_tick)
+//		{
+//			m_mouse_down_tick = current_tick;
+//			m_mouse_click_ticks = tick_count_skip + m_mouse_down_tick;
+//			input::mouse1_down();
+//		}
+//	}
+//
+//	return head_only;
+//}
 
 static void features::aimbot(C_Player local_player, C_Player target_player, cs::WEAPON_CLASS weapon_class, DWORD bullet_count, BOOL head_only)
 {
@@ -414,13 +414,13 @@ static void features::aimbot(C_Player local_player, C_Player target_player, cs::
 		return;
 	}
 
-	//
-	// anti-shake for triggerbot (disables RCS from first 2 bullets)
-	//
-	if (head_only)
-	{
-		bullet_count = 609;
-	}
+	////
+	//// anti-shake for triggerbot (disables RCS from first 2 bullets)
+	////
+	//if (head_only)
+	//{
+	//	bullet_count = 609;
+	//}
 
 	vec3 aimbot_angle = vec3{ 0, 0, 0 };
 	if (weapon_class == cs::WEAPON_CLASS::Pistol || head_only)

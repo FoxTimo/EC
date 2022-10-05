@@ -90,11 +90,11 @@ namespace input
 namespace config
 {
 	BOOL  rcs = 0;
-	DWORD aimbot_button = 110;
+	DWORD aimbot_button = 107;
 	float aimbot_fov = 2.0f;
-	float aimbot_smooth = 100.0f;
+	float aimbot_smooth = 8.0f;
 	BOOL  aimbot_visibility_check = 0;
-	DWORD triggerbot_button = 111;
+	//DWORD triggerbot_button = 111;
 }
 
 static void NtSleep(DWORD milliseconds);
@@ -110,40 +110,10 @@ NTSTATUS system_thread(void)
 	return STATUS_SUCCESS;
 }
 
-VOID
-DriverUnload(
-	_In_ struct _DRIVER_OBJECT* DriverObject
-)
+extern "C" NTSTATUS DriverEntry(PDRIVER_OBJECT Driver, PUNICODE_STRING RegistryPath)
 {
-	UNREFERENCED_PARAMETER(DriverObject);
-
-	gExitCalled = 1;
-	if (gThreadObject) {
-		KeWaitForSingleObject(
-			(PVOID)gThreadObject,
-			Executive,
-			KernelMode,
-			FALSE,
-			0
-		);
-
-		ObDereferenceObject(gThreadObject);
-
-		ZwClose(gThreadHandle);
-	}
-
-	NtSleep(1000);
-
-
-	DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, "[+] EC-CSGO.sys is closed\n");
-}
-
-extern "C" NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)
-{
-	UNREFERENCED_PARAMETER(DriverObject);
+	UNREFERENCED_PARAMETER(Driver);
 	UNREFERENCED_PARAMETER(RegistryPath);
-
-	DriverObject->DriverUnload = DriverUnload;
 
 	_KeAcquireSpinLockAtDpcLevel = (QWORD)KeAcquireSpinLockAtDpcLevel;
 	_KeReleaseSpinLockFromDpcLevel = (QWORD)KeReleaseSpinLockFromDpcLevel;
@@ -179,7 +149,7 @@ extern "C" NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING Reg
 		NULL
 	);
 
-	DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, "[+] EC-CSGO.sys is started\n");
+	DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, "kernelstart\n");
 
 	return STATUS_SUCCESS;
 }

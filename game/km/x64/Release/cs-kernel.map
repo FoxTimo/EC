@@ -1,0 +1,433 @@
+ cs-kernel
+
+ Timestamp is 633d8649 (Wed Oct  5 15:27:37 2022)
+
+ Preferred load address is 0000000140000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00004880H .text$mn                CODE
+ 0001:00004880 000004c0H .text$mn$21             CODE
+ 0001:00004d40 0000045eH .text$s                 CODE
+ 0002:00000000 000000d0H .idata$5                DATA
+ 0002:000000d0 000000c0H .rdata                  DATA
+ 0002:00000190 00000400H .xdata                  DATA
+ 0003:00000000 00000050H .data                   DATA
+ 0003:00000050 00001128H .bss                    DATA
+ 0004:00000000 00000360H .pdata                  DATA
+ 0005:00000000 00000014H .idata$2                DATA
+ 0005:00000014 00000014H .idata$3                DATA
+ 0005:00000028 000000c8H .idata$4                DATA
+ 0005:000000f0 00000240H .idata$6                DATA
+
+  Address         Publics by Value              Rva+Base               Lib:Object
+
+ 0000:00000000       __AbsoluteZero             0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
+ 0000:00000000       __arm64x_extra_rfe_table   0000000000000000     <absolute>
+ 0000:00000000       __arm64x_extra_rfe_table_size 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_native_entrypoint 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_redirection_metadata 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_redirection_metadata_count 0000000000000000     <absolute>
+ 0000:00000000       __dynamic_value_reloc_table 0000000000000000     <absolute>
+ 0000:00000000       __enclave_config           0000000000000000     <absolute>
+ 0000:00000000       __guard_check_icall_a64n_fptr 0000000000000000     <absolute>
+ 0000:00000000       __guard_eh_cont_count      0000000000000000     <absolute>
+ 0000:00000000       __guard_eh_cont_table      0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_count         0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_table         0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_count          0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_table          0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_count      0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_table      0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_iat     0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_iat_copy 0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map          0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map_count    0000000000000000     <absolute>
+ 0000:00000000       __volatile_metadata        0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points 0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points_count 0000000000000000     <absolute>
+ 0000:00000100       __guard_flags              0000000000000100     <absolute>
+ 0001:00000000       WPP_RECORDER_SF            0000000140001000 f   mouse.obj
+ 0001:00000001       MouseClassReadCopyData     0000000140001001 f   mouse.obj
+ 0001:000000db       MouseClassDequeueRead      00000001400010db f   mouse.obj
+ 0001:0000012e       MouseClassServiceCallback  000000014000112e f   mouse.obj
+ 0001:0000060c       ?close@vm@@YAXPEAX@Z       000000014000160c f   vm.obj
+ 0001:00000610       ?dump_module@vm@@YAPEAXPEAX_KW4VM_MODULE_TYPE@@@Z 0000000140001610 f   vm.obj
+ 0001:0000085c       ?free_module@vm@@YAXPEAX@Z 000000014000185c f   vm.obj
+ 0001:0000086c       ?get_module@vm@@YA_KPEAXPEBD@Z 000000014000186c f i vm.obj
+ 0001:00000b08       ?open_process_ex@vm@@YAPEAXPEBD0@Z 0000000140001b08 f   vm.obj
+ 0001:00000bf0       ?process_exists@vm@@YAHPEBD@Z 0000000140001bf0 f   vm.obj
+ 0001:00000cbc       ?read@vm@@YAHPEAX_K01@Z    0000000140001cbc f   vm.obj
+ 0001:00000d7c       ?read_i32@vm@@YAIPEAX_K@Z  0000000140001d7c f i vm.obj
+ 0001:00000da4       ?read_i64@vm@@YA_KPEAX_K@Z 0000000140001da4 f i vm.obj
+ 0001:00000dd0       ?running@vm@@YAHPEAX@Z     0000000140001dd0 f   vm.obj
+ 0001:00000f58       ?contains_player@teams@cs@@YAHIHH@Z 0000000140001f58 f   cs.obj
+ 0001:00001970       ?get_bone_position@player@cs@@YAHIHPEAY123M@Z 0000000140002970 f   cs.obj
+ 0001:000019dc       ?get_button_state@input@cs@@YAHI@Z 00000001400029dc f   cs.obj
+ 0001:00001a2c       ?get_client_entity@entity@cs@@YAIH@Z 0000000140002a2c f   cs.obj
+ 0001:00001be8       ?get_current_tick@engine@cs@@YAIXZ 0000000140002be8 f   cs.obj
+ 0001:00001c24       ?get_dormant@player@cs@@YAHI@Z 0000000140002c24 f   cs.obj
+ 0001:00001c64       ?get_eye_position@player@cs@@YA?AUvec3@@I@Z 0000000140002c64 f   cs.obj
+ 0001:00001d10       ?get_fov@player@cs@@YAHI@Z 0000000140002d10 f   cs.obj
+ 0001:00001d48       ?get_health@player@cs@@YAHI@Z 0000000140002d48 f   cs.obj
+ 0001:00001fac       ?get_life_state@player@cs@@YAHI@Z 0000000140002fac f   cs.obj
+ 0001:00001ff0       ?get_local_player@teams@cs@@YAIXZ 0000000140002ff0 f   cs.obj
+ 0001:00002024       ?get_module_export@vm@@YA_KPEAX_KPEBD@Z 0000000140003024 f i cs.obj
+ 0001:00002270       ?get_player@teams@cs@@YAIIH@Z 0000000140003270 f   cs.obj
+ 0001:000022a8       ?get_player_count@teams@cs@@YAHI@Z 00000001400032a8 f   cs.obj
+ 0001:000022dc       ?get_player_id@player@cs@@YAHI@Z 00000001400032dc f   cs.obj
+ 0001:0000230c       ?get_player_list@teams@cs@@YAII@Z 000000014000330c f   cs.obj
+ 0001:00002340       ?get_sensitivity@engine@cs@@YAMXZ 0000000140003340 f   cs.obj
+ 0001:00002380       ?get_shots_fired@player@cs@@YAHI@Z 0000000140003380 f   cs.obj
+ 0001:000023b8       ?get_team@teams@cs@@YAIIH@Z 00000001400033b8 f   cs.obj
+ 0001:000023e8       ?get_team_count@teams@cs@@YAHXZ 00000001400033e8 f   cs.obj
+ 0001:0000241c       ?get_team_list@teams@cs@@YAIXZ 000000014000341c f   cs.obj
+ 0001:00002450       ?get_vec_punch@player@cs@@YA?AUvec2@@I@Z 0000000140003450 f   cs.obj
+ 0001:00002490       ?get_viewangles@engine@cs@@YA?AUvec2@@XZ 0000000140003490 f   cs.obj
+ 0001:000024cc       ?get_weapon_class@player@cs@@YA?AW4WEAPON_CLASS@2@I@Z 00000001400034cc f   cs.obj
+ 0001:00002a88       ?get_weapon_handle@player@cs@@YAII@Z 0000000140003a88 f   cs.obj
+ 0001:00003140       ?is_gamemode_ffa@engine@cs@@YAHXZ 0000000140004140 f   cs.obj
+ 0001:0000317c       ?is_valid@player@cs@@YAHI@Z 000000014000417c f   cs.obj
+ 0001:000031cc       ?is_visible@player@cs@@YAHII@Z 00000001400041cc f   cs.obj
+ 0001:0000322c       ?reset_globals@cs@@YAXXZ   000000014000422c f   cs.obj
+ 0001:000032d8       ?running@cs@@YAHXZ         00000001400042d8 f   cs.obj
+ 0001:000032e0       ?scan_pattern@vm@@YA_KPEAXPEBD1_K@Z 00000001400042e0 f i cs.obj
+ 0001:00003a9c       ?get_fov@math@@YAMUvec2@@Uvec3@@@Z 0000000140004a9c f i features.obj
+ 0001:00003d3c       ?qatan2@math@@YAMMM@Z      0000000140004d3c f i features.obj
+ 0001:00003e1c       ?reset_mouse@features@@YAXXZ 0000000140004e1c f   features.obj
+ 0001:00003e3c       ?run@features@@YAXXZ       0000000140004e3c f   features.obj
+ 0001:00004214       ?vec_angles@math@@YAXUvec3@@PEAU2@@Z 0000000140005214 f i features.obj
+ 0001:00004354       ?vec_clamp@math@@YAXPEAUvec3@@@Z 0000000140005354 f i features.obj
+ 0001:000043e8       ?mouse1_up@input@@YAXXZ    00000001400053e8 f   main.obj
+ 0001:000043f8       ?mouse_move@input@@YAXHH@Z 00000001400053f8 f   main.obj
+ 0001:00004400       ?mouse_open@@YAHXZ         0000000140005400 f   main.obj
+ 0001:000045e4       ?move@mouse@@YAXJJG@Z      00000001400055e4 f   main.obj
+ 0001:00004650       ?system_thread@@YAJXZ      0000000140005650 f   main.obj
+ 0001:00004698       DriverEntry                0000000140005698 f   main.obj
+ 0001:000047b0       __cpu_features_init        00000001400057b0 f   ntoskrnl:cpuinfo.obj
+ 0001:00004880       memcpy                     0000000140005880 f   ntoskrnl:memcpy.obj
+ 0001:00004880       memmove                    0000000140005880 f   ntoskrnl:memcpy.obj
+ 0001:00004b40       memset                     0000000140005b40 f   ntoskrnl:memset.obj
+ 0001:00004b40       memset_$fo_default$        0000000140005b40     ntoskrnl:memset.obj
+ 0001:00004c80       __memset_repmovs           0000000140005c80 f   ntoskrnl:memset.obj
+ 0001:00004d00       __memset_query             0000000140005d00 f   ntoskrnl:memset.obj
+ 0001:00004d40       ??_C@_05BIPCPIBA@knife@FNODOBFM@ 0000000140005d40     cs.obj
+ 0001:00004d50       ??_C@_07NFBHKFPC@knife_t@FNODOBFM@ 0000000140005d50     cs.obj
+ 0001:00004d60       ??_C@_07JOIAFAEI@knifegg@FNODOBFM@ 0000000140005d60     cs.obj
+ 0001:00004d70       ??_C@_09MDJNEEPL@hegrenade@FNODOBFM@ 0000000140005d70     cs.obj
+ 0001:00004d80       ??_C@_09FHCANJKL@flashbang@FNODOBFM@ 0000000140005d80     cs.obj
+ 0001:00004d90       ??_C@_0N@LGLLMOFO@smokegrenade@FNODOBFM@ 0000000140005d90     cs.obj
+ 0001:00004da0       ??_C@_05BIGPPNGC@decoy@FNODOBFM@ 0000000140005da0     cs.obj
+ 0001:00004db0       ??_C@_07BGCKODOL@molotov@FNODOBFM@ 0000000140005db0     cs.obj
+ 0001:00004dc0       ??_C@_0L@BOANDMBB@incgrenade@FNODOBFM@ 0000000140005dc0     cs.obj
+ 0001:00004dd0       ??_C@_02PBAFKAGD@c4@FNODOBFM@ 0000000140005dd0     cs.obj
+ 0001:00004de0       ??_C@_05OIPMCNPN@ssg08@FNODOBFM@ 0000000140005de0     cs.obj
+ 0001:00004df0       ??_C@_07MLKHEOGC@hkp2000@FNODOBFM@ 0000000140005df0     cs.obj
+ 0001:00004e00       ??_C@_06BOLHOKHP@deagle@FNODOBFM@ 0000000140005e00     cs.obj
+ 0001:00004e10       ??_C@_04GHMLMJIP@p250@FNODOBFM@ 0000000140005e10     cs.obj
+ 0001:00004e20       ??_C@_05EHJKLNBO@elite@FNODOBFM@ 0000000140005e20     cs.obj
+ 0001:00004e30       ??_C@_09KEKPBIOE@fiveseven@FNODOBFM@ 0000000140005e30     cs.obj
+ 0001:00004e40       ??_C@_05KINDNLLC@glock@FNODOBFM@ 0000000140005e40     cs.obj
+ 0001:00004e50       ??_C@_04HNGCLBBP@tec9@FNODOBFM@ 0000000140005e50     cs.obj
+ 0001:00004e60       ??_C@_03CDKALHKG@awp@FNODOBFM@ 0000000140005e60     cs.obj
+ 0001:00004e70       ??_C@_06KMLOKGCE@scar20@FNODOBFM@ 0000000140005e70     cs.obj
+ 0001:00004e80       ??_C@_05EPACHGIN@g3sg1@FNODOBFM@ 0000000140005e80     cs.obj
+ 0001:00004e90       ??_C@_0L@PHFEFMEF@client?4dll@FNODOBFM@ 0000000140005e90     cs.obj
+ 0001:00004ea0       ??_C@_08NJBFDPPJ@csgo?4exe@FNODOBFM@ 0000000140005ea0     cs.obj
+ 0001:00004eb0       ??_C@_0N@NFPMGNKA@5EClient?4exe@FNODOBFM@ 0000000140005eb0     cs.obj
+ 0001:00004ec0       ??_C@_0M@LANJDPCC@5EArena?4exe@FNODOBFM@ 0000000140005ec0     cs.obj
+ 0001:00004ed0       ??_C@_0L@EMPDFJNI@engine?4dll@FNODOBFM@ 0000000140005ed0     cs.obj
+ 0001:00004ee0       ??_C@_0BE@GLOFDLNI@InputSystemVersion0@FNODOBFM@ 0000000140005ee0     cs.obj
+ 0001:00004f00       ??_C@_0BA@JBLHMOPO@inputsystem?4dll@FNODOBFM@ 0000000140005f00     cs.obj
+ 0001:00004f10       ??_C@_0N@NIGFKCDE@VEngineCvar0@FNODOBFM@ 0000000140005f10     cs.obj
+ 0001:00004f20       ??_C@_0M@EINGCJHB@vstdlib?4dll@FNODOBFM@ 0000000140005f20     cs.obj
+ 0001:00004f30       ??_C@_0M@JFLMCFNC@sensitivity@FNODOBFM@ 0000000140005f30     cs.obj
+ 0001:00004f40       ??_C@_0BJ@COACFKBJ@mp_teammates_are_enemies@FNODOBFM@ 0000000140005f40     cs.obj
+ 0001:00004f60       ??_C@_0L@IHHDNJLO@x?$DP?$DP?$DP?$DPxxxxx@FNODOBFM@ 0000000140005f60     cs.obj
+ 0001:00004f70       ??_C@_0L@GKHMNOFG@?h?$AA?$AA?$AA?$AA?$IF?$MAt?$BB_@FNODOBFM@ 0000000140005f70     cs.obj
+ 0001:00004f80       ??_C@_05HDGBDIJL@xxxxx@FNODOBFM@ 0000000140005f80     cs.obj
+ 0001:00004f90       ??_C@_05BPCKCDHN@tQ?$ILu?$AM@FNODOBFM@ 0000000140005f90     cs.obj
+ 0001:00004fa0       ??_C@_05LJBLPIID@?$IKG?$BC?$IL?$AN@FNODOBFM@ 0000000140005fa0     cs.obj
+ 0001:00004fb0       ??_C@_0M@LFGHFJDH@xx?$DP?$DP?$DP?$DPxxxxx@FNODOBFM@ 0000000140005fb0     cs.obj
+ 0001:00004fc0       ??_C@_0M@EKCNMLPE@?$IL?$AN?$AA?$AA?$AA?$AA?$APW?$MA?GE@FNODOBFM@ 0000000140005fc0     cs.obj
+ 0001:00004fd0       ??_C@_0P@NJKDGNMH@VEngineClient0@FNODOBFM@ 0000000140005fd0     cs.obj
+ 0001:00004fe0       ??_C@_0BA@OBHPCBFP@CreateInterface@FNODOBFM@ 0000000140005fe0     cs.obj
+ 0001:00004ff0       ??_C@_0M@EDKFCHIB@?$IL5?$AA?$AA?$AA?$AAW?$IF?vt8@FNODOBFM@ 0000000140005ff0     cs.obj
+ 0001:00005000       ??_C@_0O@KNDKHNCF@DT_BasePlayer@FNODOBFM@ 0000000140006000     cs.obj
+ 0001:00005010       ??_C@_0O@NDBNDAKG@DT_BaseEntity@FNODOBFM@ 0000000140006010     cs.obj
+ 0001:00005020       ??_C@_0M@LGBCIIFJ@DT_CSPlayer@FNODOBFM@ 0000000140006020     cs.obj
+ 0001:00005030       ??_C@_0BB@POPPCPOC@DT_BaseAnimating@FNODOBFM@ 0000000140006030     cs.obj
+ 0001:00005050       ??_C@_09FOIALPOM@m_iHealth@FNODOBFM@ 0000000140006050     cs.obj
+ 0001:00005060       ??_C@_0BD@BBEIOPED@m_vecViewOffset?$FL0?$FN@FNODOBFM@ 0000000140006060     cs.obj
+ 0001:00005080       ??_C@_0M@GDCAJHLF@m_lifeState@FNODOBFM@ 0000000140006080     cs.obj
+ 0001:00005090       ??_C@_07MOJIPLHI@m_Local@FNODOBFM@ 0000000140006090     cs.obj
+ 0001:000050a0       ??_C@_06MIFAJFHE@m_iFOV@FNODOBFM@ 00000001400060a0     cs.obj
+ 0001:000050b0       ??_C@_0L@OEKNBODE@m_iTeamNum@FNODOBFM@ 00000001400060b0     cs.obj
+ 0001:000050c0       ??_C@_0BB@LPOKPOFC@m_bSpottedByMask@FNODOBFM@ 00000001400060c0     cs.obj
+ 0001:000050e0       ??_C@_0M@BAFECOKC@m_vecOrigin@FNODOBFM@ 00000001400060e0     cs.obj
+ 0001:000050f0       ??_C@_0BA@MIGFFMNM@m_hActiveWeapon@FNODOBFM@ 00000001400060f0     cs.obj
+ 0001:00005100       ??_C@_0O@BINGBKKN@m_iShotsFired@FNODOBFM@ 0000000140006100     cs.obj
+ 0001:00005110       ??_C@_0O@NFCJDAAN@m_bHasDefuser@FNODOBFM@ 0000000140006110     cs.obj
+ 0001:00005120       ??_C@_0O@HHNOFAMN@m_bIsDefusing@FNODOBFM@ 0000000140006120     cs.obj
+ 0001:00005130       ??_C@_0M@MKLEPEA@m_nSequence@FNODOBFM@ 0000000140006130     cs.obj
+ 0001:00005140       ??_C@_0N@NANAPCPL@kernelstart?6@FNODOBFM@ 0000000140006140     main.obj
+ 0001:00005150       ??_C@_1CC@BLEFHADO@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?2?$AAM?$AAo?$AAu?$AAC?$AAl?$AAa?$AAs@FNODOBFM@ 0000000140006150     main.obj
+ 0001:00005180       ??_C@_1BO@OJMKCPO@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?2?$AAM?$AAo?$AAu?$AAH?$AAI?$AAD@FNODOBFM@ 0000000140006180     main.obj
+ 0002:00000000       __imp_ExAllocatePoolWithTag 0000000140007000     ntoskrnl:ntoskrnl.exe
+ 0002:00000008       __imp_ExFreePoolWithTag    0000000140007008     ntoskrnl:ntoskrnl.exe
+ 0002:00000010       __imp_MmCopyMemory         0000000140007010     ntoskrnl:ntoskrnl.exe
+ 0002:00000018       __imp_PsGetProcessId       0000000140007018     ntoskrnl:ntoskrnl.exe
+ 0002:00000020       __imp_PsGetProcessImageFileName 0000000140007020     ntoskrnl:ntoskrnl.exe
+ 0002:00000028       __imp_PsGetProcessExitProcessCalled 0000000140007028     ntoskrnl:ntoskrnl.exe
+ 0002:00000030       __imp_PsGetProcessPeb      0000000140007030     ntoskrnl:ntoskrnl.exe
+ 0002:00000038       __imp_PsGetProcessWow64Process 0000000140007038     ntoskrnl:ntoskrnl.exe
+ 0002:00000040       __imp_PsInitialSystemProcess 0000000140007040     ntoskrnl:ntoskrnl.exe
+ 0002:00000048       __imp_RtlInitUnicodeString 0000000140007048     ntoskrnl:ntoskrnl.exe
+ 0002:00000050       __imp_DbgPrintEx           0000000140007050     ntoskrnl:ntoskrnl.exe
+ 0002:00000058       __imp_KeLowerIrql          0000000140007058     ntoskrnl:ntoskrnl.exe
+ 0002:00000060       __imp_KfRaiseIrql          0000000140007060     ntoskrnl:ntoskrnl.exe
+ 0002:00000068       __imp_KeDelayExecutionThread 0000000140007068     ntoskrnl:ntoskrnl.exe
+ 0002:00000070       __imp_KeAcquireSpinLockAtDpcLevel 0000000140007070     ntoskrnl:ntoskrnl.exe
+ 0002:00000078       __imp_KeReleaseSpinLockFromDpcLevel 0000000140007078     ntoskrnl:ntoskrnl.exe
+ 0002:00000080       __imp_PsCreateSystemThread 0000000140007080     ntoskrnl:ntoskrnl.exe
+ 0002:00000088       __imp_IofCompleteRequest   0000000140007088     ntoskrnl:ntoskrnl.exe
+ 0002:00000090       __imp_IoReleaseRemoveLockEx 0000000140007090     ntoskrnl:ntoskrnl.exe
+ 0002:00000098       __imp_ObReferenceObjectByHandle 0000000140007098     ntoskrnl:ntoskrnl.exe
+ 0002:000000a0       __imp_ObfDereferenceObject 00000001400070a0     ntoskrnl:ntoskrnl.exe
+ 0002:000000a8       __imp_MmGetPhysicalMemoryRanges 00000001400070a8     ntoskrnl:ntoskrnl.exe
+ 0002:000000b0       __imp_ObReferenceObjectByName 00000001400070b0     ntoskrnl:ntoskrnl.exe
+ 0002:000000b8       IoDriverObjectType         00000001400070b8     ntoskrnl:ntoskrnl.exe
+ 0002:000000b8       __imp_IoDriverObjectType   00000001400070b8     ntoskrnl:ntoskrnl.exe
+ 0002:000000c0       \177ntoskrnl_NULL_THUNK_DATA 00000001400070c0     ntoskrnl:ntoskrnl.exe
+ 0002:000000d0       __real@00000000            00000001400070d0     features.obj
+ 0002:000000d4       __real@34000000            00000001400070d4     features.obj
+ 0002:000000d8       __real@3c5cdce5            00000001400070d8     features.obj
+ 0002:000000dc       __real@3cb43958            00000001400070dc     features.obj
+ 0002:000000e0       __real@3d6b65aa            00000001400070e0     features.obj
+ 0002:000000e4       __real@3df8476f            00000001400070e4     features.obj
+ 0002:000000e8       __real@3e48533b            00000001400070e8     features.obj
+ 0002:000000ec       __real@3e800000            00000001400070ec     features.obj
+ 0002:000000f0       __real@3eaa7daa            00000001400070f0     features.obj
+ 0002:000000f4       __real@3f7fff58            00000001400070f4     features.obj
+ 0002:000000f8       __real@3f800000            00000001400070f8     features.obj
+ 0002:000000fc       __real@3fc90fa6            00000001400070fc     features.obj
+ 0002:00000100       __real@3ff0000000000000    0000000140007100     features.obj
+ 0002:00000108       __real@40000000            0000000140007108     features.obj
+ 0002:00000110       __real@4000000000000000    0000000140007110     features.obj
+ 0002:00000118       __real@40490fd0            0000000140007118     features.obj
+ 0002:0000011c       __real@40490fdb            000000014000711c     features.obj
+ 0002:00000120       __real@40a00000            0000000140007120     features.obj
+ 0002:00000124       __real@40e00000            0000000140007124     features.obj
+ 0002:00000128       __real@42b20000            0000000140007128     features.obj
+ 0002:0000012c       __real@42b40000            000000014000712c     features.obj
+ 0002:00000130       __real@42c80000            0000000140007130     features.obj
+ 0002:00000134       __real@43340000            0000000140007134     features.obj
+ 0002:00000138       __real@43870000            0000000140007138     features.obj
+ 0002:0000013c       __real@43b40000            000000014000713c     features.obj
+ 0002:00000140       __real@bcb43958            0000000140007140     features.obj
+ 0002:00000144       __real@c0a00000            0000000140007144     features.obj
+ 0002:00000148       __real@c0e00000            0000000140007148     features.obj
+ 0002:0000014c       __real@c2b20000            000000014000714c     features.obj
+ 0002:00000150       __xmm@0000000b0000000a0000000900000008 0000000140007150     features.obj
+ 0002:00000160       __xmm@0000000f0000000e0000000d0000000c 0000000140007160     features.obj
+ 0002:00000170       __xmm@7fffffff7fffffff7fffffff7fffffff 0000000140007170     features.obj
+ 0002:00000180       __xmm@80000000800000008000000080000000 0000000140007180     features.obj
+ 0003:00000010       ?aimbot_button@config@@3IA 0000000140008010     main.obj
+ 0003:00000014       ?aimbot_fov@config@@3MA    0000000140008014     main.obj
+ 0003:00000018       ?aimbot_smooth@config@@3MA 0000000140008018     main.obj
+ 0003:00000040       __isa_info                 0000000140008040     ntoskrnl:cpuinfo.obj
+ 0003:00001110       _fltused                   0000000140009110     main.obj
+ 0003:00001114       ?rcs@config@@3HA           0000000140009114     main.obj
+ 0003:00001118       ?g_memory_range_low@@3_KA  0000000140009118     main.obj
+ 0003:00001120       ?g_memory_range_high@@3_KA 0000000140009120     main.obj
+ 0003:00001128       ?aimbot_visibility_check@config@@3HA 0000000140009128     main.obj
+ 0003:0000112c       ?gExitCalled@@3HA          000000014000912c     main.obj
+ 0003:00001130       ?gThreadObject@@3PEAXEA    0000000140009130     main.obj
+ 0003:00001138       ?gThreadHandle@@3PEAXEA    0000000140009138     main.obj
+ 0003:00001140       ?gMouseObject@@3U_MOUSE_OBJECT@@A 0000000140009140     main.obj
+ 0003:00001158       _KeAcquireSpinLockAtDpcLevel 0000000140009158     main.obj
+ 0003:00001160       _KeReleaseSpinLockFromDpcLevel 0000000140009160     main.obj
+ 0003:00001168       _IofCompleteRequest        0000000140009168     main.obj
+ 0003:00001170       _IoReleaseRemoveLockEx     0000000140009170     main.obj
+ 0005:00000000       __IMPORT_DESCRIPTOR_ntoskrnl 000000014000b000     ntoskrnl:ntoskrnl.exe
+ 0005:00000014       __NULL_IMPORT_DESCRIPTOR   000000014000b014     ntoskrnl:ntoskrnl.exe
+
+ entry point at        0001:00004698
+
+ Static symbols
+
+ 0001:00000000       $$000000                   0000000140001000     mouse.obj
+ 0001:00000a34       ?get_process_by_name@@YAPEAXPEBD@Z 0000000140001a34 f   vm.obj
+ 0001:00000c08       ?read@pm@@YAH_KPEAX0PEA_K@Z 0000000140001c08 f   vm.obj
+ 0001:00000df4       ?translate@pm@@YA_K_K0@Z   0000000140001df4 f   vm.obj
+ 0001:00000fcc       ?dump_baseanimating_callback@cs@@YAHPEBDIPEAX@Z 0000000140001fcc f   cs.obj
+ 0001:00001058       ?dump_baseentity_callback@cs@@YAHPEBDIPEAX@Z 0000000140002058 f   cs.obj
+ 0001:00001198       ?dump_baseplayer_callback@cs@@YAHPEBDIPEAX@Z 0000000140002198 f   cs.obj
+ 0001:00001370       ?dump_csplayer_callback@cs@@YAHPEBDIPEAX@Z 0000000140002370 f   cs.obj
+ 0001:00001508       ?dump_netvar_table_callback@cs@@YAHPEBDIPEAX@Z 0000000140002508 f   cs.obj
+ 0001:000016d8       ?dump_netvar_tables@cs@@YAHP6AHPEBDIPEAX@Z1@Z 00000001400026d8 f   cs.obj
+ 0001:000017cc       ?dump_netvars@cs@@YAIIP6AHPEBDIPEAX@Z1@Z 00000001400027cc f   cs.obj
+ 0001:00001a6c       ?get_convar@cs@@YAIPEBD@Z  0000000140002a6c f   cs.obj
+ 0001:00001d80       ?get_interface@cs@@YAIIPEBD@Z 0000000140002d80 f   cs.obj
+ 0001:00001ed4       ?get_interface_factory@cs@@YAII@Z 0000000140002ed4 f   cs.obj
+ 0001:00001f48       ?get_interface_function@cs@@YAIII@Z 0000000140002f48 f   cs.obj
+ 0001:000024ec       ?get_weapon_class_0@player@cs@@YA?AW4WEAPON_CLASS@2@I@Z 00000001400034ec f   cs.obj
+ 0001:000028d4       ?get_weapon_class_1@player@cs@@YA?AW4WEAPON_CLASS@2@I@Z 00000001400038d4 f   cs.obj
+ 0001:00002ad4       ?initialize@cs@@YAHXZ      0000000140003ad4 f   cs.obj
+ 0001:00003400       ?aimbot@features@@YAXIIW4WEAPON_CLASS@cs@@IH@Z 0000000140004400 f   features.obj
+ 0001:000038b4       ?get_best_target@features@@YAIIIPEAI@Z 00000001400048b4 f   features.obj
+ 0001:00003bb8       ?get_target_angle@features@@YA?AUvec3@@IU2@I@Z 0000000140004bb8 f   features.obj
+ 0001:000040ec       ?standalone_rcs@features@@YAXI@Z 00000001400050ec f   features.obj
+ 0001:00004880       $$000000                   0000000140005880     ntoskrnl:memcpy.obj
+ 0001:000048a0       mcpy00                     00000001400058a0     ntoskrnl:memcpy.obj
+ 0001:000048c0       mcpy10                     00000001400058c0     ntoskrnl:memcpy.obj
+ 0001:000048da       mcpy20                     00000001400058da     ntoskrnl:memcpy.obj
+ 0001:000048e0       mcpy30                     00000001400058e0     ntoskrnl:memcpy.obj
+ 0001:00004900       xcpy00                     0000000140005900     ntoskrnl:memcpy.obj
+ 0001:00004931       xcpy10                     0000000140005931     ntoskrnl:memcpy.obj
+ 0001:00004980       xcpy13                     0000000140005980     ntoskrnl:memcpy.obj
+ 0001:000049af       xcpy15                     00000001400059af     ntoskrnl:memcpy.obj
+ 0001:000049d1       xcpy20                     00000001400059d1     ntoskrnl:memcpy.obj
+ 0001:000049e5       xcpy30                     00000001400059e5     ntoskrnl:memcpy.obj
+ 0001:00004a00       lcpy00                     0000000140005a00     ntoskrnl:memcpy.obj
+ 0001:00004a40       lcpy10                     0000000140005a40     ntoskrnl:memcpy.obj
+ 0001:00004a80       xmov00                     0000000140005a80     ntoskrnl:memcpy.obj
+ 0001:00004aad       xmov10                     0000000140005aad     ntoskrnl:memcpy.obj
+ 0001:00004ac0       xmov13                     0000000140005ac0     ntoskrnl:memcpy.obj
+ 0001:00004aef       xmov15                     0000000140005aef     ntoskrnl:memcpy.obj
+ 0001:00004b11       xmov20                     0000000140005b11     ntoskrnl:memcpy.obj
+ 0001:00004b26       xmov30                     0000000140005b26     ntoskrnl:memcpy.obj
+ 0001:00004b40       $$000000                   0000000140005b40     ntoskrnl:memset.obj
+ 0001:00004b62       mset10                     0000000140005b62     ntoskrnl:memset.obj
+ 0001:00004b78       mset20                     0000000140005b78     ntoskrnl:memset.obj
+ 0001:00004ba1       mset30                     0000000140005ba1     ntoskrnl:memset.obj
+ 0001:00004bd0       mset45                     0000000140005bd0     ntoskrnl:memset.obj
+ 0001:00004bd6       mset46                     0000000140005bd6     ntoskrnl:memset.obj
+ 0001:00004c00       mset47                     0000000140005c00     ntoskrnl:memset.obj
+ 0001:00004c30       mset48                     0000000140005c30     ntoskrnl:memset.obj
+ 0001:00004c46       mset50                     0000000140005c46     ntoskrnl:memset.obj
+ 0001:00004c80       $$000000                   0000000140005c80     ntoskrnl:memset.obj
+ 0001:00004c8a       repmovs10                  0000000140005c8a     ntoskrnl:memset.obj
+ 0001:00004cbc       repmovs20                  0000000140005cbc     ntoskrnl:memset.obj
+ 0001:00004d00       $$000000                   0000000140005d00     ntoskrnl:memset.obj
+ 0002:00000190       $unwind$?get_client_entity@entity@cs@@YAIH@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_current_tick@engine@cs@@YAIXZ 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_dormant@player@cs@@YAHI@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_fov@player@cs@@YAHI@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_health@player@cs@@YAHI@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_interface_factory@cs@@YAII@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_life_state@player@cs@@YAHI@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_local_player@teams@cs@@YAIXZ 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_player_count@teams@cs@@YAHI@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_player_id@player@cs@@YAHI@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_player_list@teams@cs@@YAII@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_shots_fired@player@cs@@YAHI@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_team@teams@cs@@YAIIH@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_team_count@teams@cs@@YAHXZ 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_team_list@teams@cs@@YAIXZ 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_vec_punch@player@cs@@YA?AUvec2@@I@Z 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?get_viewangles@engine@cs@@YA?AUvec2@@XZ 0000000140007190     cs.obj
+ 0002:00000190       $unwind$?reset_mouse@features@@YAXXZ 0000000140007190     features.obj
+ 0002:00000190       $unwind$?system_thread@@YAJXZ 0000000140007190     main.obj
+ 0002:00000190       $unwind$?process_exists@vm@@YAHPEBD@Z 0000000140007190     vm.obj
+ 0002:00000190       $unwind$?read_i32@vm@@YAIPEAX_K@Z 0000000140007190     vm.obj
+ 0002:00000190       $unwind$?read_i64@vm@@YA_KPEAX_K@Z 0000000140007190     vm.obj
+ 0002:0000019c       $unwind$?open_process_ex@vm@@YAPEAXPEBD0@Z 000000014000719c     vm.obj
+ 0002:000001b8       $unwind$?get_button_state@input@cs@@YAHI@Z 00000001400071b8     cs.obj
+ 0002:000001b8       $unwind$?get_interface_function@cs@@YAIII@Z 00000001400071b8     cs.obj
+ 0002:000001b8       $unwind$?get_sensitivity@engine@cs@@YAMXZ 00000001400071b8     cs.obj
+ 0002:000001b8       $unwind$?get_weapon_class@player@cs@@YA?AW4WEAPON_CLASS@2@I@Z 00000001400071b8     cs.obj
+ 0002:000001b8       $unwind$?is_gamemode_ffa@engine@cs@@YAHXZ 00000001400071b8     cs.obj
+ 0002:000001b8       $unwind$?running@vm@@YAHPEAX@Z 00000001400071b8     vm.obj
+ 0002:000001c4       $unwind$?read@vm@@YAHPEAX_K01@Z 00000001400071c4     vm.obj
+ 0002:000001e0       $unwind$?dump_module@vm@@YAPEAXPEAX_KW4VM_MODULE_TYPE@@@Z 00000001400071e0     vm.obj
+ 0002:000001fc       $unwind$?get_module@vm@@YA_KPEAXPEBD@Z 00000001400071fc     vm.obj
+ 0002:00000220       $unwind$?read@pm@@YAH_KPEAX0PEA_K@Z 0000000140007220     vm.obj
+ 0002:00000234       $unwind$?translate@pm@@YA_K_K0@Z 0000000140007234     vm.obj
+ 0002:0000024c       $unwind$?get_process_by_name@@YAPEAXPEBD@Z 000000014000724c     vm.obj
+ 0002:00000268       $unwind$?get_module_export@vm@@YA_KPEAX_KPEBD@Z 0000000140007268     cs.obj
+ 0002:0000028c       $unwind$?scan_pattern@vm@@YA_KPEAXPEBD1_K@Z 000000014000728c     cs.obj
+ 0002:000002ac       $unwind$?get_player@teams@cs@@YAIIH@Z 00000001400072ac     cs.obj
+ 0002:000002b8       $unwind$?contains_player@teams@cs@@YAHIHH@Z 00000001400072b8     cs.obj
+ 0002:000002d0       $unwind$?is_valid@player@cs@@YAHI@Z 00000001400072d0     cs.obj
+ 0002:000002e0       $unwind$?is_visible@player@cs@@YAHII@Z 00000001400072e0     cs.obj
+ 0002:000002f4       $unwind$?get_weapon_handle@player@cs@@YAII@Z 00000001400072f4     cs.obj
+ 0002:00000300       $unwind$?get_eye_position@player@cs@@YA?AUvec3@@I@Z 0000000140007300     cs.obj
+ 0002:00000314       $unwind$?get_bone_position@player@cs@@YAHIHPEAY123M@Z 0000000140007314     cs.obj
+ 0002:00000324       $unwind$?get_interface@cs@@YAIIPEBD@Z 0000000140007324     cs.obj
+ 0002:00000340       $unwind$?get_convar@cs@@YAIPEBD@Z 0000000140007340     cs.obj
+ 0002:00000358       $unwind$?dump_netvar_tables@cs@@YAHP6AHPEBDIPEAX@Z1@Z 0000000140007358     cs.obj
+ 0002:00000374       $unwind$?dump_netvars@cs@@YAIIP6AHPEBDIPEAX@Z1@Z 0000000140007374     cs.obj
+ 0002:00000394       $unwind$?dump_netvar_table_callback@cs@@YAHPEBDIPEAX@Z 0000000140007394     cs.obj
+ 0002:000003ac       $unwind$?dump_baseplayer_callback@cs@@YAHPEBDIPEAX@Z 00000001400073ac     cs.obj
+ 0002:000003ac       $unwind$?dump_csplayer_callback@cs@@YAHPEBDIPEAX@Z 00000001400073ac     cs.obj
+ 0002:000003c4       $unwind$?dump_baseentity_callback@cs@@YAHPEBDIPEAX@Z 00000001400073c4     cs.obj
+ 0002:000003dc       $unwind$?dump_baseanimating_callback@cs@@YAHPEBDIPEAX@Z 00000001400073dc     cs.obj
+ 0002:000003f0       $unwind$?get_weapon_class_0@player@cs@@YA?AW4WEAPON_CLASS@2@I@Z 00000001400073f0     cs.obj
+ 0002:00000408       $unwind$?get_weapon_class_1@player@cs@@YA?AW4WEAPON_CLASS@2@I@Z 0000000140007408     cs.obj
+ 0002:00000418       $unwind$?initialize@cs@@YAHXZ 0000000140007418     cs.obj
+ 0002:00000430       $unwind$?qatan2@math@@YAMMM@Z 0000000140007430     features.obj
+ 0002:00000444       $unwind$?vec_angles@math@@YAXUvec3@@PEAU2@@Z 0000000140007444     features.obj
+ 0002:00000464       $unwind$?get_fov@math@@YAMUvec2@@Uvec3@@@Z 0000000140007464     features.obj
+ 0002:00000474       $unwind$?run@features@@YAXXZ 0000000140007474     features.obj
+ 0002:00000498       $unwind$?standalone_rcs@features@@YAXI@Z 0000000140007498     features.obj
+ 0002:000004b4       $unwind$?aimbot@features@@YAXIIW4WEAPON_CLASS@cs@@IH@Z 00000001400074b4     features.obj
+ 0002:000004f0       $unwind$?get_target_angle@features@@YA?AUvec3@@IU2@I@Z 00000001400074f0     features.obj
+ 0002:00000504       $unwind$?get_best_target@features@@YAIIIPEAI@Z 0000000140007504     features.obj
+ 0002:00000528       $unwind$?mouse_open@@YAHXZ 0000000140007528     main.obj
+ 0002:0000053c       $unwind$?move@mouse@@YAXJJG@Z 000000014000753c     main.obj
+ 0002:00000548       $unwind$DriverEntry        0000000140007548     main.obj
+ 0002:00000558       $xdatasym$memcpy           0000000140007558     ntoskrnl:memcpy.obj
+ 0002:00000558       $xdatasym$memset           0000000140007558     ntoskrnl:memset.obj
+ 0002:00000560       $xdatasym$__memset_repmovs 0000000140007560     ntoskrnl:memset.obj
+ 0002:00000570       $xdatasym$__memset_query   0000000140007570     ntoskrnl:memset.obj
+ 0002:00000584       $unwind$__cpu_features_init 0000000140007584     ntoskrnl:cpuinfo.obj
+ 0003:00000000       WPP_RECORDER_INITIALIZED   0000000140008000     mouse.obj
+ 0003:00000008       WPP_GLOBAL_Control         0000000140008008     mouse.obj
+ 0003:00000050       ?MM_COPY_BUFFER@@3PAEA     0000000140008050     vm.obj
+ 0003:00001050       ?m_ButtonState@input@cs@@3IA 0000000140009050     cs.obj
+ 0003:00001054       ?m_nLastPollTick@input@cs@@3IA 0000000140009054     cs.obj
+ 0003:00001058       ?m_mouseRawAccum@input@cs@@3IA 0000000140009058     cs.obj
+ 0003:0000105c       ?use_dormant_check@cs@@3HA 000000014000905c     cs.obj
+ 0003:00001060       ?csgo_handle@cs@@3PEAXEA   0000000140009060     cs.obj
+ 0003:00001068       ?IInputSystem@cs@@3IA      0000000140009068     cs.obj
+ 0003:0000106c       ?VEngineCvar@cs@@3IA       000000014000906c     cs.obj
+ 0003:00001070       ?sensitivity@cs@@3IA       0000000140009070     cs.obj
+ 0003:00001074       ?mp_teammates_are_enemies@cs@@3IA 0000000140009074     cs.obj
+ 0003:00001078       ?C_BasePlayer@cs@@3IA      0000000140009078     cs.obj
+ 0003:0000107c       ?g_TeamCount@cs@@3IA       000000014000907c     cs.obj
+ 0003:00001080       ?g_Teams@cs@@3IA           0000000140009080     cs.obj
+ 0003:00001084       ?dwViewAngles@cs@@3IA      0000000140009084     cs.obj
+ 0003:00001088       ?VClientEntityList@cs@@3IA 0000000140009088     cs.obj
+ 0003:0000108c       ?dwGetAllClasses@cs@@3IA   000000014000908c     cs.obj
+ 0003:00001090       ?dwClientState@cs@@3IA     0000000140009090     cs.obj
+ 0003:00001094       ?netvar_status@cs@@3HA     0000000140009094     cs.obj
+ 0003:00001098       ?m_iHealth@cs@@3IA         0000000140009098     cs.obj
+ 0003:0000109c       ?m_vecViewOffset@cs@@3IA   000000014000909c     cs.obj
+ 0003:000010a0       ?m_lifeState@cs@@3IA       00000001400090a0     cs.obj
+ 0003:000010a4       ?m_vecPunch@cs@@3IA        00000001400090a4     cs.obj
+ 0003:000010a8       ?m_iFOV@cs@@3IA            00000001400090a8     cs.obj
+ 0003:000010ac       ?m_iTeamNum@cs@@3IA        00000001400090ac     cs.obj
+ 0003:000010b0       ?m_bSpottedByMask@cs@@3IA  00000001400090b0     cs.obj
+ 0003:000010b4       ?m_vecOrigin@cs@@3IA       00000001400090b4     cs.obj
+ 0003:000010b8       ?m_hActiveWeapon@cs@@3IA   00000001400090b8     cs.obj
+ 0003:000010bc       ?m_iShotsFired@cs@@3IA     00000001400090bc     cs.obj
+ 0003:000010c0       ?m_iCrossHairID@cs@@3IA    00000001400090c0     cs.obj
+ 0003:000010c4       ?m_bHasDefuser@cs@@3IA     00000001400090c4     cs.obj
+ 0003:000010c8       ?m_bIsDefusing@cs@@3IA     00000001400090c8     cs.obj
+ 0003:000010cc       ?m_dwBoneMatrix@cs@@3IA    00000001400090cc     cs.obj
+ 0003:000010d0       ?m_rcs_old_punch@features@@3Uvec2@@A 00000001400090d0     features.obj
+ 0003:000010d8       ?m_rcs_old_temp_punch_x@features@@3MA 00000001400090d8     features.obj
+ 0003:000010dc       ?m_rcs_old_shots_fired@features@@3IA 00000001400090dc     features.obj
+ 0003:000010e0       ?m_aimbot_old_temp_punch_x@features@@3MA 00000001400090e0     features.obj
+ 0003:000010e4       ?m_aimbot_old_shots_fired@features@@3IA 00000001400090e4     features.obj
+ 0003:000010e8       ?m_aimbot_active@features@@3HA 00000001400090e8     features.obj
+ 0003:000010ec       ?m_previous_button@features@@3HA 00000001400090ec     features.obj
+ 0003:000010f0       ?m_weapon_class@features@@3W4WEAPON_CLASS@cs@@A 00000001400090f0     features.obj
+ 0003:000010f4       ?m_previous_target@features@@3IA 00000001400090f4     features.obj
+ 0003:000010f8       ?m_previous_team@features@@3IA 00000001400090f8     features.obj
+ 0003:000010fc       ?m_previous_tick@features@@3IA 00000001400090fc     features.obj
+ 0003:00001100       ?m_mouse_down_tick@features@@3_KA 0000000140009100     features.obj
+ 0003:00001108       ?m_mouse_click_ticks@features@@3_KA 0000000140009108     features.obj
+ 0005:00000322       .idata$6                   000000014000b322     ntoskrnl:ntoskrnl.exe

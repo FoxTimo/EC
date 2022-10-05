@@ -1,0 +1,12 @@
+﻿  Building 'cs-kernel' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Assembling mouse.asm...
+  vm.cpp
+  cs.cpp
+  features.cpp
+  main.cpp
+  Code wird generiert...
+  km.vcxproj -> C:\Users\Timo\Documents\GitHub\EC\game\km\x64\Release\cs-kernel.sys
+  Done Adding Additional Store
+  Successfully signed: C:\Users\Timo\Documents\GitHub\EC\game\km\x64\Release\cs-kernel.sys
+  
+  Driver is 'Universal'.
